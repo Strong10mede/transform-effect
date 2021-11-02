@@ -50,13 +50,28 @@
 <script>
 
     var dark = document.querySelector(".dark");
+    
+    if(localStorage.getitem("theme")=null){
+        localStorage.setitem("theme","day");}
+    
+    let localData = localStorage.getitem("theme");
+        
+    
+    if(localData =="night"){
+        document.body.classList.remove("dark-theme");
+    }
+    else if(local=="day"){
+        document.body.classList.add("dark-theme");
+        }
 
     dark.onclick = function(){
         document.body.classList.toggle("dark-theme");
         if(document.body.classList.contains("dark-theme")){
             dark.src="sun.png";
+            localStorage.setitem("theme","night");
         }else{
             dark.src="moon.png";
+            localStorage.setitem("theme","day");
         }
         
     }
