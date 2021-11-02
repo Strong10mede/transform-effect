@@ -3,8 +3,18 @@
     padding: 0;
 }
 
+:root{
+    --primary-color:#edf2fc;
+    --secondary-color:#212121;
+}
+
+.dark-theme{
+    --primary-color:#001000;
+    --secondary-color:#fff;
+}
+
 body{
-    background: #edf2fc;
+    background: var(--primary-color);
 }
 .container{
     height: 100vh;
@@ -28,9 +38,19 @@ body{
     transition: 0.25s ease-in-out;
 }
 
+.container nav .dark{
+    width: 1.25rem;
+    cursor: pointer;
+}
+
 .container nav .logo:hover{
     width: 6vw;
     filter: drop-shadow(0 0 1.25rem #ec4022);
+}
+
+.container nav ul{
+    flex: 1;
+    text-align: end;
 }
 
 .container nav ul li{
@@ -42,7 +62,7 @@ body{
 
 .container nav ul li a{
     text-decoration: none;
-    color: #686163;
+    color: var(--secondary-color);
 }
 
 .container nav ul li a:hover{
@@ -57,7 +77,7 @@ body{
 
 .info h1{
     font-size: 4rem;
-    color: #212121;
+    color:var(--secondary-color);
     margin-bottom: 1.25rem;
 }
 
@@ -66,17 +86,17 @@ body{
 }
 
 .info p{
-    color: #212121;
+    color: var(--secondary-color);
     line-height: 1.25rem;
 }
 
 .info a{
-    background: #212121;
+    background: var(--secondary-color);
     padding: 1.5rem;
     font-size: 1.25rem;
     border-radius: 0.5rem;
     text-decoration: none;
-    color: #fff;
+    color:var(--primary-color);
     display: inline-block;
     margin: 1.5rem 0;
 }
@@ -112,7 +132,7 @@ body{
 }
 
 .social-links a{
-    color: #212121;
+    color: var(--secondary-color);
     padding: 1rem;
     font-size: 1.5rem;
 }
@@ -120,4 +140,5 @@ body{
 .social-links a:hover{
     color: #ff4321;
 }
+
 
