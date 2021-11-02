@@ -51,29 +51,27 @@
 
     var dark = document.querySelector(".dark");
     
-    if(localStorage.getitem("theme")=null){
-        localStorage.setitem("theme","day");}
-    
-    let localData = localStorage.getitem("theme");
-        
-    
-    if(localData =="day"){
+    if(localStorage.getItem("theme")== null){
+    localStorage.setItem("theme","day");}
+
+    let localData = localStorage.getItem("theme");
+
+    if(localData=="day"){
         dark.src="moon.png";
         document.body.classList.remove("dark-theme");
-    }
-    else if(localData=="night"){
+    }else if(localData=="night"){
         dark.src="sun.png";
         document.body.classList.add("dark-theme");
-        }
+    }
 
     dark.onclick = function(){
         document.body.classList.toggle("dark-theme");
         if(document.body.classList.contains("dark-theme")){
             dark.src="sun.png";
-            localStorage.setitem("theme","night");
+            localStorage.setItem("theme","night");
         }else{
             dark.src="moon.png";
-            localStorage.setitem("theme","day");
+            localStorage.setItem("theme","day");
         }
         
     }
