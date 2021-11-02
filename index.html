@@ -57,10 +57,12 @@
     let localData = localStorage.getitem("theme");
         
     
-    if(localData =="night"){
+    if(localData =="day"){
+        dark.src="moon.png";
         document.body.classList.remove("dark-theme");
     }
-    else if(local=="day"){
+    else if(local=="night"){
+        dark.src="sun.png"
         document.body.classList.add("dark-theme");
         }
 
